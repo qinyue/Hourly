@@ -14,14 +14,13 @@
 		335880FD18BF94B000B6EA57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 335880FC18BF94B000B6EA57 /* main.m */; };
 		3358810118BF94B000B6EA57 /* SXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358810018BF94B000B6EA57 /* SXAppDelegate.m */; };
 		3358810418BF94B000B6EA57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3358810218BF94B000B6EA57 /* Main.storyboard */; };
-		3358810718BF94B000B6EA57 /* SXFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358810618BF94B000B6EA57 /* SXFirstViewController.m */; };
-		3358810A18BF94B000B6EA57 /* SXSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358810918BF94B000B6EA57 /* SXSecondViewController.m */; };
 		3358810C18BF94B000B6EA57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3358810B18BF94B000B6EA57 /* Images.xcassets */; };
 		3358811318BF94B000B6EA57 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3358811218BF94B000B6EA57 /* XCTest.framework */; };
 		3358811418BF94B000B6EA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F018BF94B000B6EA57 /* Foundation.framework */; };
 		3358811518BF94B000B6EA57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F418BF94B000B6EA57 /* UIKit.framework */; };
 		3358811D18BF94B000B6EA57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3358811B18BF94B000B6EA57 /* InfoPlist.strings */; };
 		3358811F18BF94B000B6EA57 /* HourlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358811E18BF94B000B6EA57 /* HourlyTests.m */; };
+		3358812B18BF95CB00B6EA57 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3358812918BF95CB00B6EA57 /* Note.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +45,13 @@
 		335880FF18BF94B000B6EA57 /* SXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXAppDelegate.h; sourceTree = "<group>"; };
 		3358810018BF94B000B6EA57 /* SXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXAppDelegate.m; sourceTree = "<group>"; };
 		3358810318BF94B000B6EA57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3358810518BF94B000B6EA57 /* SXFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXFirstViewController.h; sourceTree = "<group>"; };
-		3358810618BF94B000B6EA57 /* SXFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXFirstViewController.m; sourceTree = "<group>"; };
-		3358810818BF94B000B6EA57 /* SXSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXSecondViewController.h; sourceTree = "<group>"; };
-		3358810918BF94B000B6EA57 /* SXSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXSecondViewController.m; sourceTree = "<group>"; };
 		3358810B18BF94B000B6EA57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3358811118BF94B000B6EA57 /* HourlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HourlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3358811218BF94B000B6EA57 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3358811A18BF94B000B6EA57 /* HourlyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HourlyTests-Info.plist"; sourceTree = "<group>"; };
 		3358811C18BF94B000B6EA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3358811E18BF94B000B6EA57 /* HourlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HourlyTests.m; sourceTree = "<group>"; };
+		3358812A18BF95CB00B6EA57 /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +111,10 @@
 		335880F618BF94B000B6EA57 /* Hourly */ = {
 			isa = PBXGroup;
 			children = (
+				3358812818BF95BA00B6EA57 /* CoreData */,
 				335880FF18BF94B000B6EA57 /* SXAppDelegate.h */,
 				3358810018BF94B000B6EA57 /* SXAppDelegate.m */,
 				3358810218BF94B000B6EA57 /* Main.storyboard */,
-				3358810518BF94B000B6EA57 /* SXFirstViewController.h */,
-				3358810618BF94B000B6EA57 /* SXFirstViewController.m */,
-				3358810818BF94B000B6EA57 /* SXSecondViewController.h */,
-				3358810918BF94B000B6EA57 /* SXSecondViewController.m */,
 				3358810B18BF94B000B6EA57 /* Images.xcassets */,
 				335880F718BF94B000B6EA57 /* Supporting Files */,
 			);
@@ -155,6 +148,15 @@
 				3358811B18BF94B000B6EA57 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3358812818BF95BA00B6EA57 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3358812918BF95CB00B6EA57 /* Note.xcdatamodeld */,
+			);
+			name = CoreData;
+			path = Model/CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3358812B18BF95CB00B6EA57 /* Note.xcdatamodeld in Sources */,
 				335880FD18BF94B000B6EA57 /* main.m in Sources */,
-				3358810A18BF94B000B6EA57 /* SXSecondViewController.m in Sources */,
 				3358810118BF94B000B6EA57 /* SXAppDelegate.m in Sources */,
-				3358810718BF94B000B6EA57 /* SXFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +478,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3358812918BF95CB00B6EA57 /* Note.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3358812A18BF95CB00B6EA57 /* Note.xcdatamodel */,
+			);
+			currentVersion = 3358812A18BF95CB00B6EA57 /* Note.xcdatamodel */;
+			path = Note.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 335880E518BF94B000B6EA57 /* Project object */;
 }
