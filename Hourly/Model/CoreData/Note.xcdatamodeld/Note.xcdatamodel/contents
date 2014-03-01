@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="HourNoteItem" syncable="YES">
-        <attribute name="attribute" optional="YES" attributeType="Date" syncable="YES"/>
+    <entity name="ContentItem" representedClassName="ContentItem" syncable="YES">
+        <attribute name="creationDate" attributeType="Date" syncable="YES"/>
+        <attribute name="lastModificationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="text" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DayNoteItem" representedClassName="DayNoteItem" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <relationship name="hourNoteItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HourNoteItem" syncable="YES"/>
+        <relationship name="schedule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentItem" syncable="YES"/>
+        <relationship name="summary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentItem" syncable="YES"/>
+    </entity>
+    <entity name="HourNoteItem" representedClassName="HourNoteItem" syncable="YES">
+        <attribute name="content" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" attributeType="Date" syncable="YES"/>
+        <attribute name="keyword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nextStep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="WeekNoteItem" representedClassName="WeekNoteItem" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <relationship name="dayNoteItems" optional="YES" toMany="YES" maxCount="7" deletionRule="Nullify" destinationEntity="DayNoteItem" syncable="YES"/>
+        <relationship name="schedule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentItem" syncable="YES"/>
+        <relationship name="summary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentItem" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HourNoteItem" positionX="-5274" positionY="-2196" width="128" height="58"/>
+        <element name="HourNoteItem" positionX="-13383" positionY="-6102" width="126" height="118"/>
+        <element name="DayNoteItem" positionX="-13052" positionY="-6111" width="128" height="88"/>
+        <element name="ContentItem" positionX="-13248" positionY="-5830" width="128" height="88"/>
+        <element name="WeekNoteItem" positionX="-13212" positionY="-5931" width="128" height="88"/>
     </elements>
 </model>

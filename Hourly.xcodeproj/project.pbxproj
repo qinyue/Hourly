@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3323E2CC18C23DA5002BBDE4 /* DayNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2CB18C23DA5002BBDE4 /* DayNoteItem.m */; };
+		3323E2CF18C23DA5002BBDE4 /* ContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2CE18C23DA5002BBDE4 /* ContentItem.m */; };
+		3323E2D218C23DA5002BBDE4 /* WeekNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2D118C23DA5002BBDE4 /* WeekNoteItem.m */; };
+		3323E2D518C23DA5002BBDE4 /* HourNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2D418C23DA5002BBDE4 /* HourNoteItem.m */; };
 		335880F118BF94B000B6EA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F018BF94B000B6EA57 /* Foundation.framework */; };
 		335880F318BF94B000B6EA57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F218BF94B000B6EA57 /* CoreGraphics.framework */; };
 		335880F518BF94B000B6EA57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F418BF94B000B6EA57 /* UIKit.framework */; };
@@ -34,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3323E2CA18C23DA5002BBDE4 /* DayNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayNoteItem.h; sourceTree = "<group>"; };
+		3323E2CB18C23DA5002BBDE4 /* DayNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayNoteItem.m; sourceTree = "<group>"; };
+		3323E2CD18C23DA5002BBDE4 /* ContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentItem.h; sourceTree = "<group>"; };
+		3323E2CE18C23DA5002BBDE4 /* ContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentItem.m; sourceTree = "<group>"; };
+		3323E2D018C23DA5002BBDE4 /* WeekNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekNoteItem.h; sourceTree = "<group>"; };
+		3323E2D118C23DA5002BBDE4 /* WeekNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekNoteItem.m; sourceTree = "<group>"; };
+		3323E2D318C23DA5002BBDE4 /* HourNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourNoteItem.h; sourceTree = "<group>"; };
+		3323E2D418C23DA5002BBDE4 /* HourNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourNoteItem.m; sourceTree = "<group>"; };
 		335880ED18BF94B000B6EA57 /* Hourly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hourly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335880F018BF94B000B6EA57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		335880F218BF94B000B6EA57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -154,6 +166,14 @@
 			isa = PBXGroup;
 			children = (
 				3358812918BF95CB00B6EA57 /* Note.xcdatamodeld */,
+				3323E2CD18C23DA5002BBDE4 /* ContentItem.h */,
+				3323E2CE18C23DA5002BBDE4 /* ContentItem.m */,
+				3323E2D318C23DA5002BBDE4 /* HourNoteItem.h */,
+				3323E2D418C23DA5002BBDE4 /* HourNoteItem.m */,
+				3323E2CA18C23DA5002BBDE4 /* DayNoteItem.h */,
+				3323E2CB18C23DA5002BBDE4 /* DayNoteItem.m */,
+				3323E2D018C23DA5002BBDE4 /* WeekNoteItem.h */,
+				3323E2D118C23DA5002BBDE4 /* WeekNoteItem.m */,
 			);
 			name = CoreData;
 			path = Model/CoreData;
@@ -257,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3323E2CF18C23DA5002BBDE4 /* ContentItem.m in Sources */,
 				3358812B18BF95CB00B6EA57 /* Note.xcdatamodeld in Sources */,
+				3323E2D518C23DA5002BBDE4 /* HourNoteItem.m in Sources */,
 				335880FD18BF94B000B6EA57 /* main.m in Sources */,
+				3323E2D218C23DA5002BBDE4 /* WeekNoteItem.m in Sources */,
+				3323E2CC18C23DA5002BBDE4 /* DayNoteItem.m in Sources */,
 				3358810118BF94B000B6EA57 /* SXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +492,7 @@
 				3358812418BF94B000B6EA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3358812518BF94B000B6EA57 /* Build configuration list for PBXNativeTarget "HourlyTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +501,7 @@
 				3358812718BF94B000B6EA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
