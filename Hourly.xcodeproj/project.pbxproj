@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3323E2CC18C23DA5002BBDE4 /* DayNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2CB18C23DA5002BBDE4 /* DayNoteItem.m */; };
-		3323E2CF18C23DA5002BBDE4 /* ContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2CE18C23DA5002BBDE4 /* ContentItem.m */; };
-		3323E2D218C23DA5002BBDE4 /* WeekNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2D118C23DA5002BBDE4 /* WeekNoteItem.m */; };
-		3323E2D518C23DA5002BBDE4 /* HourNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3323E2D418C23DA5002BBDE4 /* HourNoteItem.m */; };
 		335880F118BF94B000B6EA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F018BF94B000B6EA57 /* Foundation.framework */; };
 		335880F318BF94B000B6EA57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F218BF94B000B6EA57 /* CoreGraphics.framework */; };
 		335880F518BF94B000B6EA57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F418BF94B000B6EA57 /* UIKit.framework */; };
@@ -24,7 +20,21 @@
 		3358811518BF94B000B6EA57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F418BF94B000B6EA57 /* UIKit.framework */; };
 		3358811D18BF94B000B6EA57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3358811B18BF94B000B6EA57 /* InfoPlist.strings */; };
 		3358811F18BF94B000B6EA57 /* HourlyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358811E18BF94B000B6EA57 /* HourlyTests.m */; };
-		3358812B18BF95CB00B6EA57 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3358812918BF95CB00B6EA57 /* Note.xcdatamodeld */; };
+		33B46A6818C31621004191C8 /* ContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A5F18C31621004191C8 /* ContentItem.m */; };
+		33B46A6918C31621004191C8 /* DayNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A6118C31621004191C8 /* DayNoteItem.m */; };
+		33B46A6A18C31621004191C8 /* HourNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A6318C31621004191C8 /* HourNoteItem.m */; };
+		33B46A6C18C31621004191C8 /* WeekNoteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A6718C31621004191C8 /* WeekNoteItem.m */; };
+		33B46A7118C316DE004191C8 /* SXHomeTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A7018C316DE004191C8 /* SXHomeTabController.m */; };
+		33B46A7518C31735004191C8 /* SXHourNotesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A7418C31735004191C8 /* SXHourNotesController.m */; };
+		33B46A7A18C317E3004191C8 /* SXWeekDaysNoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A7918C317E3004191C8 /* SXWeekDaysNoteController.m */; };
+		33B46A7E18C3184A004191C8 /* SXNoteTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A7D18C3184A004191C8 /* SXNoteTextController.m */; };
+		33B46A8518C318DD004191C8 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A8318C318DD004191C8 /* Note.xcdatamodeld */; };
+		33B46A8818C31982004191C8 /* SXNoteLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A8718C31982004191C8 /* SXNoteLibrary.m */; };
+		33B46A8C18C324CA004191C8 /* SXNoteTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B46A8B18C324CA004191C8 /* SXNoteTextView.m */; };
+		33CFBD0518C375A100786B73 /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFBD0418C375A100786B73 /* NSDate+String.m */; };
+		33CFBD0818C3792300786B73 /* NSObject+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFBD0718C3792300786B73 /* NSObject+String.m */; };
+		33CFBD0C18C38EF200786B73 /* SXFetchResultsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFBD0B18C38EF200786B73 /* SXFetchResultsTableController.m */; };
+		33CFBD0F18C394DC00786B73 /* NSDate+DateComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CFBD0E18C394DC00786B73 /* NSDate+DateComponents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3323E2CA18C23DA5002BBDE4 /* DayNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayNoteItem.h; sourceTree = "<group>"; };
-		3323E2CB18C23DA5002BBDE4 /* DayNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayNoteItem.m; sourceTree = "<group>"; };
-		3323E2CD18C23DA5002BBDE4 /* ContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentItem.h; sourceTree = "<group>"; };
-		3323E2CE18C23DA5002BBDE4 /* ContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentItem.m; sourceTree = "<group>"; };
-		3323E2D018C23DA5002BBDE4 /* WeekNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekNoteItem.h; sourceTree = "<group>"; };
-		3323E2D118C23DA5002BBDE4 /* WeekNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekNoteItem.m; sourceTree = "<group>"; };
-		3323E2D318C23DA5002BBDE4 /* HourNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourNoteItem.h; sourceTree = "<group>"; };
-		3323E2D418C23DA5002BBDE4 /* HourNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourNoteItem.m; sourceTree = "<group>"; };
 		335880ED18BF94B000B6EA57 /* Hourly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hourly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335880F018BF94B000B6EA57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		335880F218BF94B000B6EA57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +65,35 @@
 		3358811A18BF94B000B6EA57 /* HourlyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HourlyTests-Info.plist"; sourceTree = "<group>"; };
 		3358811C18BF94B000B6EA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3358811E18BF94B000B6EA57 /* HourlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HourlyTests.m; sourceTree = "<group>"; };
-		3358812A18BF95CB00B6EA57 /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		33B46A5E18C31621004191C8 /* ContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentItem.h; sourceTree = "<group>"; };
+		33B46A5F18C31621004191C8 /* ContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentItem.m; sourceTree = "<group>"; };
+		33B46A6018C31621004191C8 /* DayNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayNoteItem.h; sourceTree = "<group>"; };
+		33B46A6118C31621004191C8 /* DayNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayNoteItem.m; sourceTree = "<group>"; };
+		33B46A6218C31621004191C8 /* HourNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourNoteItem.h; sourceTree = "<group>"; };
+		33B46A6318C31621004191C8 /* HourNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourNoteItem.m; sourceTree = "<group>"; };
+		33B46A6618C31621004191C8 /* WeekNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekNoteItem.h; sourceTree = "<group>"; };
+		33B46A6718C31621004191C8 /* WeekNoteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekNoteItem.m; sourceTree = "<group>"; };
+		33B46A6F18C316DE004191C8 /* SXHomeTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHomeTabController.h; sourceTree = "<group>"; };
+		33B46A7018C316DE004191C8 /* SXHomeTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHomeTabController.m; sourceTree = "<group>"; };
+		33B46A7318C31735004191C8 /* SXHourNotesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHourNotesController.h; sourceTree = "<group>"; };
+		33B46A7418C31735004191C8 /* SXHourNotesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHourNotesController.m; sourceTree = "<group>"; };
+		33B46A7818C317E3004191C8 /* SXWeekDaysNoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWeekDaysNoteController.h; sourceTree = "<group>"; };
+		33B46A7918C317E3004191C8 /* SXWeekDaysNoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWeekDaysNoteController.m; sourceTree = "<group>"; };
+		33B46A7C18C3184A004191C8 /* SXNoteTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXNoteTextController.h; sourceTree = "<group>"; };
+		33B46A7D18C3184A004191C8 /* SXNoteTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXNoteTextController.m; sourceTree = "<group>"; };
+		33B46A8418C318DD004191C8 /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		33B46A8618C31982004191C8 /* SXNoteLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXNoteLibrary.h; sourceTree = "<group>"; };
+		33B46A8718C31982004191C8 /* SXNoteLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXNoteLibrary.m; sourceTree = "<group>"; };
+		33B46A8A18C324CA004191C8 /* SXNoteTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXNoteTextView.h; sourceTree = "<group>"; };
+		33B46A8B18C324CA004191C8 /* SXNoteTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXNoteTextView.m; sourceTree = "<group>"; };
+		33CFBD0318C375A100786B73 /* NSDate+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+String.h"; sourceTree = "<group>"; };
+		33CFBD0418C375A100786B73 /* NSDate+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+String.m"; sourceTree = "<group>"; };
+		33CFBD0618C3792300786B73 /* NSObject+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+String.h"; sourceTree = "<group>"; };
+		33CFBD0718C3792300786B73 /* NSObject+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+String.m"; sourceTree = "<group>"; };
+		33CFBD0A18C38EF200786B73 /* SXFetchResultsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXFetchResultsTableController.h; sourceTree = "<group>"; };
+		33CFBD0B18C38EF200786B73 /* SXFetchResultsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXFetchResultsTableController.m; sourceTree = "<group>"; };
+		33CFBD0D18C394DC00786B73 /* NSDate+DateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateComponents.h"; sourceTree = "<group>"; };
+		33CFBD0E18C394DC00786B73 /* NSDate+DateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateComponents.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +153,9 @@
 		335880F618BF94B000B6EA57 /* Hourly */ = {
 			isa = PBXGroup;
 			children = (
-				3358812818BF95BA00B6EA57 /* CoreData */,
+				33B46A6D18C31645004191C8 /* Controller */,
+				33B46A6E18C31645004191C8 /* View */,
+				33B46A5C18C31621004191C8 /* Model */,
 				335880FF18BF94B000B6EA57 /* SXAppDelegate.h */,
 				3358810018BF94B000B6EA57 /* SXAppDelegate.m */,
 				3358810218BF94B000B6EA57 /* Main.storyboard */,
@@ -162,21 +194,126 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3358812818BF95BA00B6EA57 /* CoreData */ = {
+		33B46A5C18C31621004191C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3358812918BF95CB00B6EA57 /* Note.xcdatamodeld */,
-				3323E2CD18C23DA5002BBDE4 /* ContentItem.h */,
-				3323E2CE18C23DA5002BBDE4 /* ContentItem.m */,
-				3323E2D318C23DA5002BBDE4 /* HourNoteItem.h */,
-				3323E2D418C23DA5002BBDE4 /* HourNoteItem.m */,
-				3323E2CA18C23DA5002BBDE4 /* DayNoteItem.h */,
-				3323E2CB18C23DA5002BBDE4 /* DayNoteItem.m */,
-				3323E2D018C23DA5002BBDE4 /* WeekNoteItem.h */,
-				3323E2D118C23DA5002BBDE4 /* WeekNoteItem.m */,
+				33CFBD0218C3753900786B73 /* Utility */,
+				33B46A7F18C318BD004191C8 /* NoteLibrary */,
+				33B46A5D18C31621004191C8 /* CoreData */,
 			);
-			name = CoreData;
-			path = Model/CoreData;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33B46A5D18C31621004191C8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A8318C318DD004191C8 /* Note.xcdatamodeld */,
+				33B46A5E18C31621004191C8 /* ContentItem.h */,
+				33B46A5F18C31621004191C8 /* ContentItem.m */,
+				33B46A6018C31621004191C8 /* DayNoteItem.h */,
+				33B46A6118C31621004191C8 /* DayNoteItem.m */,
+				33B46A6218C31621004191C8 /* HourNoteItem.h */,
+				33B46A6318C31621004191C8 /* HourNoteItem.m */,
+				33B46A6618C31621004191C8 /* WeekNoteItem.h */,
+				33B46A6718C31621004191C8 /* WeekNoteItem.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		33B46A6D18C31645004191C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33CFBD0918C38ECC00786B73 /* Base */,
+				33B46A7B18C3182B004191C8 /* NoteText */,
+				33B46A7718C31756004191C8 /* Days */,
+				33B46A7618C3173E004191C8 /* Hours */,
+				33B46A7218C316E4004191C8 /* Main */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33B46A6E18C31645004191C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A8918C324BC004191C8 /* NoteText */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33B46A7218C316E4004191C8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A6F18C316DE004191C8 /* SXHomeTabController.h */,
+				33B46A7018C316DE004191C8 /* SXHomeTabController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		33B46A7618C3173E004191C8 /* Hours */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A7318C31735004191C8 /* SXHourNotesController.h */,
+				33B46A7418C31735004191C8 /* SXHourNotesController.m */,
+			);
+			name = Hours;
+			sourceTree = "<group>";
+		};
+		33B46A7718C31756004191C8 /* Days */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A7818C317E3004191C8 /* SXWeekDaysNoteController.h */,
+				33B46A7918C317E3004191C8 /* SXWeekDaysNoteController.m */,
+			);
+			name = Days;
+			sourceTree = "<group>";
+		};
+		33B46A7B18C3182B004191C8 /* NoteText */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A7C18C3184A004191C8 /* SXNoteTextController.h */,
+				33B46A7D18C3184A004191C8 /* SXNoteTextController.m */,
+			);
+			name = NoteText;
+			sourceTree = "<group>";
+		};
+		33B46A7F18C318BD004191C8 /* NoteLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A8618C31982004191C8 /* SXNoteLibrary.h */,
+				33B46A8718C31982004191C8 /* SXNoteLibrary.m */,
+			);
+			path = NoteLibrary;
+			sourceTree = "<group>";
+		};
+		33B46A8918C324BC004191C8 /* NoteText */ = {
+			isa = PBXGroup;
+			children = (
+				33B46A8A18C324CA004191C8 /* SXNoteTextView.h */,
+				33B46A8B18C324CA004191C8 /* SXNoteTextView.m */,
+			);
+			path = NoteText;
+			sourceTree = "<group>";
+		};
+		33CFBD0218C3753900786B73 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				33CFBD0318C375A100786B73 /* NSDate+String.h */,
+				33CFBD0418C375A100786B73 /* NSDate+String.m */,
+				33CFBD0618C3792300786B73 /* NSObject+String.h */,
+				33CFBD0718C3792300786B73 /* NSObject+String.m */,
+				33CFBD0D18C394DC00786B73 /* NSDate+DateComponents.h */,
+				33CFBD0E18C394DC00786B73 /* NSDate+DateComponents.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		33CFBD0918C38ECC00786B73 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				33CFBD0A18C38EF200786B73 /* SXFetchResultsTableController.h */,
+				33CFBD0B18C38EF200786B73 /* SXFetchResultsTableController.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,13 +414,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3323E2CF18C23DA5002BBDE4 /* ContentItem.m in Sources */,
-				3358812B18BF95CB00B6EA57 /* Note.xcdatamodeld in Sources */,
-				3323E2D518C23DA5002BBDE4 /* HourNoteItem.m in Sources */,
+				33B46A7518C31735004191C8 /* SXHourNotesController.m in Sources */,
 				335880FD18BF94B000B6EA57 /* main.m in Sources */,
-				3323E2D218C23DA5002BBDE4 /* WeekNoteItem.m in Sources */,
-				3323E2CC18C23DA5002BBDE4 /* DayNoteItem.m in Sources */,
+				33B46A8518C318DD004191C8 /* Note.xcdatamodeld in Sources */,
+				33B46A6A18C31621004191C8 /* HourNoteItem.m in Sources */,
+				33B46A8818C31982004191C8 /* SXNoteLibrary.m in Sources */,
+				33CFBD0518C375A100786B73 /* NSDate+String.m in Sources */,
+				33B46A7A18C317E3004191C8 /* SXWeekDaysNoteController.m in Sources */,
 				3358810118BF94B000B6EA57 /* SXAppDelegate.m in Sources */,
+				33B46A8C18C324CA004191C8 /* SXNoteTextView.m in Sources */,
+				33CFBD0818C3792300786B73 /* NSObject+String.m in Sources */,
+				33CFBD0F18C394DC00786B73 /* NSDate+DateComponents.m in Sources */,
+				33B46A6C18C31621004191C8 /* WeekNoteItem.m in Sources */,
+				33B46A7E18C3184A004191C8 /* SXNoteTextController.m in Sources */,
+				33B46A6818C31621004191C8 /* ContentItem.m in Sources */,
+				33CFBD0C18C38EF200786B73 /* SXFetchResultsTableController.m in Sources */,
+				33B46A6918C31621004191C8 /* DayNoteItem.m in Sources */,
+				33B46A7118C316DE004191C8 /* SXHomeTabController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,12 +653,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3358812918BF95CB00B6EA57 /* Note.xcdatamodeld */ = {
+		33B46A8318C318DD004191C8 /* Note.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3358812A18BF95CB00B6EA57 /* Note.xcdatamodel */,
+				33B46A8418C318DD004191C8 /* Note.xcdatamodel */,
 			);
-			currentVersion = 3358812A18BF95CB00B6EA57 /* Note.xcdatamodel */;
+			currentVersion = 33B46A8418C318DD004191C8 /* Note.xcdatamodel */;
 			path = Note.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

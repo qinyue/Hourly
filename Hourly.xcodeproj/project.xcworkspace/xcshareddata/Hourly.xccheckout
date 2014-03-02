@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2BA3A0DA-26D4-4781-A8F9-BA0D25F39966</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hourly</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B6C25C73-6589-41BC-97D8-3FF32EBC8F83</key>
+		<string>https://github.com/qinyue/Hourly.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hourly.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B6C25C73-6589-41BC-97D8-3FF32EBC8F83</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/qinyue/Hourly.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B6C25C73-6589-41BC-97D8-3FF32EBC8F83</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B6C25C73-6589-41BC-97D8-3FF32EBC8F83</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hourly</string>
+		</dict>
+	</array>
+</dict>
+</plist>
