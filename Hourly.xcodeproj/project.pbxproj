@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334E81F718C62ABB001DC892 /* SXHourNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E81F618C62ABB001DC892 /* SXHourNoteCell.m */; };
+		334E81FA18C6369A001DC892 /* StoryboardUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 334E81F918C6369A001DC892 /* StoryboardUtility.m */; };
 		335880F118BF94B000B6EA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F018BF94B000B6EA57 /* Foundation.framework */; };
 		335880F318BF94B000B6EA57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F218BF94B000B6EA57 /* CoreGraphics.framework */; };
 		335880F518BF94B000B6EA57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335880F418BF94B000B6EA57 /* UIKit.framework */; };
@@ -48,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		334E81F518C62ABB001DC892 /* SXHourNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHourNoteCell.h; sourceTree = "<group>"; };
+		334E81F618C62ABB001DC892 /* SXHourNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHourNoteCell.m; sourceTree = "<group>"; };
+		334E81F818C6369A001DC892 /* StoryboardUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryboardUtility.h; sourceTree = "<group>"; };
+		334E81F918C6369A001DC892 /* StoryboardUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardUtility.m; sourceTree = "<group>"; };
 		335880ED18BF94B000B6EA57 /* Hourly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hourly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		335880F018BF94B000B6EA57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		335880F218BF94B000B6EA57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334E81F418C62A42001DC892 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				334E81F518C62ABB001DC892 /* SXHourNoteCell.h */,
+				334E81F618C62ABB001DC892 /* SXHourNoteCell.m */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
 		335880E418BF94B000B6EA57 = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +250,7 @@
 		33B46A6E18C31645004191C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				334E81F418C62A42001DC892 /* TableCell */,
 				33B46A8918C324BC004191C8 /* NoteText */,
 			);
 			path = View;
@@ -297,6 +313,8 @@
 		33CFBD0218C3753900786B73 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				334E81F818C6369A001DC892 /* StoryboardUtility.h */,
+				334E81F918C6369A001DC892 /* StoryboardUtility.m */,
 				33CFBD0318C375A100786B73 /* NSDate+String.h */,
 				33CFBD0418C375A100786B73 /* NSDate+String.m */,
 				33CFBD0618C3792300786B73 /* NSObject+String.h */,
@@ -430,6 +448,8 @@
 				33B46A6818C31621004191C8 /* ContentItem.m in Sources */,
 				33CFBD0C18C38EF200786B73 /* SXFetchResultsTableController.m in Sources */,
 				33B46A6918C31621004191C8 /* DayNoteItem.m in Sources */,
+				334E81F718C62ABB001DC892 /* SXHourNoteCell.m in Sources */,
+				334E81FA18C6369A001DC892 /* StoryboardUtility.m in Sources */,
 				33B46A7118C316DE004191C8 /* SXHomeTabController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

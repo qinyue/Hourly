@@ -106,7 +106,7 @@
         <!--Note Text Controller-->
         <scene sceneID="whN-Pu-OqU">
             <objects>
-                <viewController id="YkO-B8-CdL" customClass="SXNoteTextController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteTextViewController" id="YkO-B8-CdL" customClass="SXNoteTextController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vxY-jP-QM4"/>
                         <viewControllerLayoutGuide type="bottom" id="0Kr-vu-dFk"/>

@@ -12,6 +12,7 @@
 
 @protocol SXNoteTextViewDelegate <UITextViewDelegate>
 
+@optional
 - (void) setAsKeywordForNoteTextView:(SXNoteTextView *)noteTextView;
 
 @end

@@ -15,10 +15,6 @@
     
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:self];
-//    NSDateComponents* components = [[NSDateComponents alloc] init];
-//    components.year = 2014;
-//    components.month = 3;
-//    components.day = 2;
     components.hour = 0;
     components.minute = 0;
     components.second = 0;

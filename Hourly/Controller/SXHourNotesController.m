@@ -10,8 +10,53 @@
 #import "HourNoteItem.h"
 #import "NSObject+String.h"
 #import "NSDate+DateComponents.h"
+#import "NSDate+String.h"
+#import "SXHourNoteCell.h"
+#import "SXNoteLibrary.h"
+#import "StoryboardUtility.h"
+
+
+@interface HourNoteCellItem : NSObject
+@property(nonatomic, retain) HourNoteItem* noteItem;
+
+@property(nonatomic) CGSize contentSize;
+@property(nonatomic, retain) NSString* dateText;
+
+@property(nonatomic, retain) UIFont* dateFont;
+@property(nonatomic, retain) UIFont* contentFont;
+
+- (id) initWithNote:(HourNoteItem *)note;
+
+@end
+
+@implementation HourNoteCellItem
+
+- (id) initWithNote:(HourNoteItem *)note
+{
+    self = [super init];
+    if (self)
+    {
+        self.dateFont = [UIFont systemFontOfSize:18];
+        self.contentFont = [UIFont systemFontOfSize:14];
+        self.noteItem = note;
+        
+        self.dateText = [self.noteItem.creationDate descriptionWithFormat:@"HH:mm:ss"];
+        [self calculateContentSize];
+    }
+    return self;
+}
+
+- (void) calculateContentSize
+{
+    CGRect rect = [self.noteItem.content boundingRectWithSize:CGSizeMake(300, 160) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.contentFont} context:nil];
+    self.contentSize = rect.size;
+}
+
+@end
 
 @interface SXHourNotesController ()
+
+@property(nonatomic, retain) NSMutableArray* cellItems;
 
 @end
 
@@ -32,13 +77,46 @@ static NSString *CellIdentifier = @"Cell";
 {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+    [self.tableView registerClass:[SXHourNoteCell class] forCellReuseIdentifier:CellIdentifier];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self initCellItems];
+}
+
+- (void) initCellItems
+{
+    self.cellItems = [NSMutableArray array];
+    [self resetCellItems];
+}
+
+- (void) resetCellItems
+{
+    [self.cellItems removeAllObjects];
+    for (HourNoteItem *item in self.fetchResultsController.fetchedObjects)
+    {
+        HourNoteCellItem* cellItem = [[HourNoteCellItem alloc] initWithNote:item];
+        [self.cellItems addObject:cellItem];
+    }
+}
+
+- (void) addLastCellItems
+{
+    HourNoteCellItem* cellItem = [[HourNoteCellItem alloc] initWithNote:self.fetchResultsController.fetchedObjects.lastObject];
+    [self.cellItems addObject:cellItem];
+}
+
+- (BOOL) updateCellItem:(HourNoteItem *)noteItem atIndex:(NSInteger)row
+{
+    HourNoteCellItem* cellItem = [self.cellItems objectAtIndex:row];
+    CGFloat oldHeight = cellItem.contentSize.height;
+    cellItem.noteItem = noteItem;
+    [cellItem calculateContentSize];
+    return oldHeight != cellItem.contentSize.height;
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,6 +132,7 @@ static NSString *CellIdentifier = @"Cell";
         _dayDate = dayDate;
         
         [self reloadFetchRequest];
+        [self resetCellItems];
     }
 }
 
@@ -82,39 +161,115 @@ static NSString *CellIdentifier = @"Cell";
 
 #pragma mark - Table view data source
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return ((HourNoteCellItem *)[self.cellItems objectAtIndex:indexPath.row]).contentSize.height + 2 * 6 + 4 + 20;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    HourNoteCellItem* item = [self.cellItems objectAtIndex:indexPath.row];
+    SXHourNoteCell *cell = (SXHourNoteCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (cell == nil)
+    {
+        cell = [[SXHourNoteCell alloc] initWithReuseId:CellIdentifier];
+        cell.textLabel.font = item.dateFont;
+        cell.detailTextLabel.font = item.contentFont;
+    }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    HourNoteItem* item =[self.fetchResultsController objectAtIndexPath:indexPath];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@", item.creationDate];
     
-    HourNoteItem* item = [self.fetchResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [item.creationDate description];
+    
+    cell.detailSize = item.contentSize;
+    cell.textLabel.text = item.dateText;
+    cell.detailTextLabel.text = item.noteItem.content;
     
     return cell;
 }
 
-/*
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    HourNoteCellItem* item = [self.cellItems objectAtIndex:indexPath.row];
+    SXNoteTextController* notes = [StoryboardUtility noteTextViewController];
+    //    NoteTextViewController* notes = [[NoteTextViewController alloc] init];
+    notes.noteItem = item.noteItem;
+    notes.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:notes animated:YES];
+}
+
+- (void) controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
+- (void) controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView endUpdates];
+}
+
+- (void) controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self addLastCellItems];
+            [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObjects:newIndexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            if ([self updateCellItem:anObject atIndex:indexPath.row])
+            {
+                [self.tableView reloadData];
+            }
+            else
+            {
+                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:newIndexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
+            }
+            
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            
+            [self.cellItems removeObjectAtIndex:indexPath.row];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        
+        NSManagedObjectContext* context = [SXNoteLibrary sharedNotesLibrary].managedObjectContext;
+        
+        
+        
+        HourNoteCellItem* item = [self.cellItems objectAtIndex:indexPath.row];
+        
+        [context deleteObject:item.noteItem];
+        
+        
+        
+        
+        
+        
+    }
 }
-*/
 
 /*
 // Override to support rearranging the table view.
