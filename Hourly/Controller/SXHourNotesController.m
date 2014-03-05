@@ -40,7 +40,7 @@
         self.contentFont = [UIFont systemFontOfSize:14];
         self.noteItem = note;
         
-        self.dateText = [self.noteItem.creationDate descriptionWithFormat:@"HH:mm:ss"];
+        self.dateText = [self.noteItem.creationDate descriptionWithFormat:@"HH:mm"];
         [self calculateContentSize];
     }
     return self;
@@ -157,6 +157,11 @@ static NSString *CellIdentifier = @"Cell";
     request.sortDescriptors = [NSArray arrayWithObject:sort];
     
     return request;
+}
+
+- (NSString *) fetchResultsCacheName
+{
+    return @"hour";
 }
 
 #pragma mark - Table view data source

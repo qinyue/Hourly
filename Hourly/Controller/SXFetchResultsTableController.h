@@ -15,6 +15,8 @@
 
 - (NSFetchRequest *) fetchRequestForFetchResultsTableController:(SXFetchResultsTableController *)tableController;
 
+- (NSString *) fetchResultsCacheName;
+
 @end
 
 @interface SXFetchResultsTableController : UITableViewController<SXFetchResultsDataSource>

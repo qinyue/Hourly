@@ -49,7 +49,7 @@
     if (request != Nil)
     {
         NSManagedObjectContext* context = [SXNoteLibrary sharedNotesLibrary].managedObjectContext;
-        _fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:nil cacheName:@"Root"];
+        _fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:nil cacheName:[self fetchResultsCacheName]];
         _fetchResultsController.delegate = self;
         NSError* erro = nil;
         [self.fetchResultsController performFetch:&erro];
@@ -59,6 +59,11 @@
 - (NSFetchRequest *) fetchRequestForFetchResultsTableController:(SXFetchResultsTableController *)tableController
 {
     return nil;
+}
+
+- (NSString *) fetchResultsCacheName
+{
+    return @"Root";
 }
 
 - (void) reloadFetchRequest
