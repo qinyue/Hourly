@@ -46,11 +46,57 @@
                             <outlet property="delegate" destination="SPp-pA-C2a" id="okN-CZ-B3U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Recent" id="GFD-A0-qmk"/>
+                    <navigationItem key="navigationItem" title="Recent" id="GFD-A0-qmk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Teb-WX-nwC">
+                            <connections>
+                                <segue destination="Ubl-ab-TCD" kind="modal" id="a0k-4N-y6X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLd-Au-RhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58" y="-401"/>
+        </scene>
+        <!--Recent Period Picker Controller - Custom Recent-->
+        <scene sceneID="CqK-ax-Rw9">
+            <objects>
+                <tableViewController id="xe0-Dh-X76" customClass="SXRecentPeriodPickerController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="i42-BW-TVo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Pth-48-Rkq">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pth-48-Rkq" id="t39-yN-gn1">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xe0-Dh-X76" id="hcn-VZ-qaj"/>
+                            <outlet property="delegate" destination="xe0-Dh-X76" id="Lqc-GS-6i1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Custom Recent" id="Qcx-Zr-UnX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HfH-IT-FDk">
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="xe0-Dh-X76" id="oh9-h6-yCz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Q1q-fv-axb">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="xe0-Dh-X76" id="ePR-mB-UWl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1Q-5T-6m2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="-440"/>
         </scene>
         <!--Hour Notes Controller - Today-->
         <scene sceneID="VWb-OU-Auz">
@@ -181,6 +227,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQU-sD-HaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="447" y="-1221"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wlG-Av-DZ0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ubl-ab-TCD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Fh-m0-WdD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xe0-Dh-X76" kind="relationship" relationship="rootViewController" id="Qhn-qD-4cV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfV-MV-vv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="-418"/>
         </scene>
     </scenes>
     <resources>
