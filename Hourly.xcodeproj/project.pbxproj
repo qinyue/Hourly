@@ -74,13 +74,14 @@
 		3358811A18BF94B000B6EA57 /* HourlyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HourlyTests-Info.plist"; sourceTree = "<group>"; };
 		3358811C18BF94B000B6EA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3358811E18BF94B000B6EA57 /* HourlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HourlyTests.m; sourceTree = "<group>"; };
+		335FE1C218CA281500A66D6E /* Note 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Note 3.xcdatamodel"; sourceTree = "<group>"; };
 		33885B3318C8C60300877E75 /* SXFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXFileUtil.h; sourceTree = "<group>"; };
 		33885B3418C8C60300877E75 /* SXFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXFileUtil.m; sourceTree = "<group>"; };
 		33885B3718C8C68200877E75 /* SXUserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXUserPreferences.h; sourceTree = "<group>"; };
 		33885B3818C8C68200877E75 /* SXUserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXUserPreferences.m; sourceTree = "<group>"; };
 		33885B3D18C8C9C200877E75 /* SXRecentPeriodPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXRecentPeriodPickerController.h; sourceTree = "<group>"; };
 		33885B3E18C8C9C200877E75 /* SXRecentPeriodPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXRecentPeriodPickerController.m; sourceTree = "<group>"; };
-		33885B4D18C8D82800877E75 /* Note 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Note 2.xcdatamodel"; sourceTree = "<group>"; };
+		33885B4D18C8D82800877E75 /* Note 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Note 2.xcdatamodel"; sourceTree = "<group>"; };
 		33885B4E18C8D90000877E75 /* ContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentItem.h; sourceTree = "<group>"; };
 		33885B4F18C8D90000877E75 /* ContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentItem.m; sourceTree = "<group>"; };
 		33885B5118C8D90100877E75 /* WeekNoteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekNoteItem.h; sourceTree = "<group>"; };
@@ -711,10 +712,11 @@
 		33B46A8318C318DD004191C8 /* Note.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				335FE1C218CA281500A66D6E /* Note 3.xcdatamodel */,
 				33885B4D18C8D82800877E75 /* Note 2.xcdatamodel */,
 				33B46A8418C318DD004191C8 /* Note.xcdatamodel */,
 			);
-			currentVersion = 33885B4D18C8D82800877E75 /* Note 2.xcdatamodel */;
+			currentVersion = 335FE1C218CA281500A66D6E /* Note 3.xcdatamodel */;
 			path = Note.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
