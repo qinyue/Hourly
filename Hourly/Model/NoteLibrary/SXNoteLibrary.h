@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "HourNoteItem.h"
+
 @interface SXNoteLibrary : NSObject
 
 @property(nonatomic, strong) NSManagedObjectModel* managedObjectModel;
@@ -17,5 +19,7 @@
 - (void) sync;
 
 + (SXNoteLibrary *) sharedNotesLibrary;
+
+- (void) addHourNote:(HourNoteItem *)hourItem;
 
 @end

@@ -73,4 +73,9 @@ static SXNoteLibrary* stNoteLibarary = nil;
     return _persistentStoreCoordinator;
 }
 
+- (void) addHourNote:(HourNoteItem *)hourItem
+{
+    
+}
+
 @end

@@ -18,3 +18,14 @@
 @dynamic summary;
 
 @end
+
+@implementation DayNoteItem (FetchedProperties)
+
+@dynamic hourNotes;
+//
+//- (NSArray *) hourNotes
+//{
+//    return [self valueForKey:@"hourNotes"];
+//}
+
+@end
