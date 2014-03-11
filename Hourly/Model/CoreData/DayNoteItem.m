@@ -2,30 +2,23 @@
 //  DayNoteItem.m
 //  Hourly
 //
-//  Created by 胡少华 on 14-3-7.
+//  Created by 胡少华 on 14-3-8.
 //  Copyright (c) 2014年 shangxia. All rights reserved.
 //
 
 #import "DayNoteItem.h"
 #import "ContentItem.h"
+#import "HourNoteItem.h"
+#import "WeekNoteItem.h"
 
 
 @implementation DayNoteItem
 
 @dynamic beginDate;
 @dynamic endDate;
+@dynamic hours;
 @dynamic schedule;
 @dynamic summary;
-
-@end
-
-@implementation DayNoteItem (FetchedProperties)
-
-@dynamic hourNotes;
-//
-//- (NSArray *) hourNotes
-//{
-//    return [self valueForKey:@"hourNotes"];
-//}
+@dynamic week;
 
 @end
