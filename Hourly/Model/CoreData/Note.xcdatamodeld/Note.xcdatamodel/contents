@@ -25,9 +25,9 @@
         <relationship name="summary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentItem" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HourNoteItem" positionX="-13383" positionY="-6102" width="126" height="118"/>
-        <element name="DayNoteItem" positionX="-13052" positionY="-6111" width="128" height="88"/>
-        <element name="ContentItem" positionX="-13248" positionY="-5830" width="128" height="88"/>
-        <element name="WeekNoteItem" positionX="-13212" positionY="-5931" width="128" height="88"/>
+        <element name="ContentItem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DayNoteItem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="HourNoteItem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="WeekNoteItem" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
