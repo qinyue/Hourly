@@ -62,20 +62,12 @@ static SXNoteLibrary* stNoteLibarary = nil;
         NSString* docs = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         NSURL* storeUrl = [NSURL fileURLWithPath:[docs stringByAppendingPathComponent:@"note.sqlite"]];
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-        NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-                                 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                                 [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-        if ([_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:options error:&error] == nil)
+        if ([_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error] == nil)
         {
             NSLog(@"%s failed!", __FUNCTION__);
         }
     }
     return _persistentStoreCoordinator;
-}
-
-- (void) addHourNote:(HourNoteItem *)hourItem
-{
-    
 }
 
 @end
